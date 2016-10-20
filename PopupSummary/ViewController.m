@@ -100,7 +100,7 @@
 {
     InfoViewController *infoViewController = [[InfoViewController alloc] init];
     UIPopoverController *popViewController = [[UIPopoverController alloc] initWithContentViewController:infoViewController];
-    //popViewController.popoverContentSize = CGSizeMake(200, 100); //弹出窗口大小，如果屏幕画不下，会挤小的。这个值默认是320x1100
+    popViewController.popoverContentSize = CGSizeMake(200, 100); //弹出窗口大小，如果屏幕画不下，会挤小的。这个值默认是320x1100
     [popViewController presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
 }
 
