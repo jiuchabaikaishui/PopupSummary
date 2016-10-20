@@ -36,16 +36,16 @@
     
     [self settingUi];
 }
+- (void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+    
+    self.tableView.frame = self.view.bounds;
+}
 
 #pragma mark - 自定义方法
 - (void)settingUi
 {
-    CGSize size;
-    size.width = 420;
-    size.height = 175;
-    //用于任何容器布局子控制器，弹出窗口的原始大小来自视图控制器的此属性
-    self.preferredContentSize = size;
-    
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     tableView.dataSource = self;
     tableView.delegate = self;
