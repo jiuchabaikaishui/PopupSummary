@@ -26,7 +26,7 @@
     if (_dataArr == nil) {
         _dataArr = [NSMutableArray arrayWithCapacity:1];
         __weak typeof(self) weakSelf = self;
-        NSArray *arr = @[@{@"title":@"UIPopoverController:只能使用于iPad，在iPhone中奔溃！"}, @{@"items":@[
+        NSArray *arr = @[@{@"title":@"UIPopoverController:iOS9中被弃用，只能使用于iPad，在iPhone中奔溃！"}, @{@"items":@[
                                                         @{@"title":@"UIPopoverController", @"subTitle":@"UIPopoverController", @"option":^{
                                                             InfoViewController *infoViewController = [[InfoViewController alloc] init];
                                                             UIPopoverController *popViewController = [[UIPopoverController alloc] initWithContentViewController:infoViewController];
@@ -157,7 +157,6 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
     }
     
-    cell.backgroundColor = RandomColor;
     cell.imageView.image = [self resizableImage:[self imageFromColor:RandomColor andFrame:CGRectMake(0, 0, 100, 100)]];
     cell.textLabel.backgroundColor = RandomColor;
     cell.detailTextLabel.backgroundColor = RandomColor;
