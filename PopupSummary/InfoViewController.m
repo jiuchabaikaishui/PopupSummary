@@ -9,7 +9,8 @@
 #import "InfoViewController.h"
 
 @interface InfoViewController ()<UITableViewDataSource, UITableViewDelegate>
-@property (weak, nonatomic) UITableView *tableView;
+//@property (weak, nonatomic) UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *dataArr;
 
 @end
@@ -31,6 +32,10 @@
 }
 
 #pragma mark - 控制器周期
++ (instancetype)infoViewController
+{
+    return [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"InfoViewController"];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -46,12 +51,7 @@
 #pragma mark - 自定义方法
 - (void)settingUi
 {
-    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    tableView.dataSource = self;
-    tableView.delegate = self;
-    tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    [self.view addSubview:tableView];
-    self.tableView = tableView;
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 #pragma mark - <UITableViewDataSource, UITableViewDelegate>代理方法

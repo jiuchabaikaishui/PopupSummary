@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface InfoViewController : UIViewController
++ (instancetype)infoViewController;
 
 @end

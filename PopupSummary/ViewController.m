@@ -15,6 +15,7 @@
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *dataArr;
+@property (strong, nonatomic) UIPopoverController *popoverController;
 
 @end
 
@@ -27,64 +28,77 @@
         _dataArr = [NSMutableArray arrayWithCapacity:1];
         __weak typeof(self) weakSelf = self;
         NSArray *arr = @[@{@"title":@"UIPopoverController:iOS9中被弃用，只能使用于iPad，在iPhone中奔溃！"}, @{@"items":@[
-                                                        @{@"title":@"UIPopoverController", @"subTitle":@"UIPopoverController", @"option":^{
-                                                            InfoViewController *infoViewController = [[InfoViewController alloc] init];
-                                                            UIPopoverController *popViewController = [[UIPopoverController alloc] initWithContentViewController:infoViewController];
-                                                            //popViewController.popoverContentSize = CGSizeMake(200, 100); //弹出窗口大小，如果屏幕画不下，会挤小的。这个值默认是320x1100
-                                                            CGRect rect = CGRectMake(44, 0, 0, 0);
-                                                            NSIndexPath *indexPath = [weakSelf.tableView indexPathForSelectedRow];
-                                                            UITableViewCell *cell = [weakSelf.tableView cellForRowAtIndexPath:indexPath];
-                                                            popViewController.backgroundColor = [UIColor redColor];
-                                                            [popViewController presentPopoverFromRect:rect inView:cell permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];}},
-                                                        @{@"title":@"UIPopoverController", @"subTitle":@"", @"option":^{
-                                                            InfoViewController *infoViewController = [[InfoViewController alloc] init];
-                                                            UIPopoverController *popViewController = [[UIPopoverController alloc] initWithContentViewController:infoViewController];
-                                                            //popViewController.popoverContentSize = CGSizeMake(200, 100); //弹出窗口大小，如果屏幕画不下，会挤小的。这个值默认是320x1100
-                                                            CGRect rect = CGRectMake(0, 44, 0, 0);
-                                                            NSIndexPath *indexPath = [weakSelf.tableView indexPathForSelectedRow];
-                                                            UITableViewCell *cell = [weakSelf.tableView cellForRowAtIndexPath:indexPath];
-                                                            [popViewController presentPopoverFromRect:rect inView:cell permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];}},
-                                                        @{@"title":@"UIPopoverController", @"subTitle":@"", @"option":^{
-                                                            InfoViewController *infoViewController = [[InfoViewController alloc] init];
-                                                            UIPopoverController *popViewController = [[UIPopoverController alloc] initWithContentViewController:infoViewController];
-                                                            //popViewController.popoverContentSize = CGSizeMake(200, 100); //弹出窗口大小，如果屏幕画不下，会挤小的。这个值默认是320x1100
-                                                            CGRect rect = CGRectMake(0, 0, 44, 0);
-                                                            NSIndexPath *indexPath = [weakSelf.tableView indexPathForSelectedRow];
-                                                            UITableViewCell *cell = [weakSelf.tableView cellForRowAtIndexPath:indexPath];
-                                                            [popViewController presentPopoverFromRect:rect inView:cell permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];}},
-                                                        @{@"title":@"UIPopoverController", @"subTitle":@"", @"option":^{
-                                                            InfoViewController *infoViewController = [[InfoViewController alloc] init];
-                                                            UIPopoverController *popViewController = [[UIPopoverController alloc] initWithContentViewController:infoViewController];
-                                                            //popViewController.popoverContentSize = CGSizeMake(200, 100); //弹出窗口大小，如果屏幕画不下，会挤小的。这个值默认是320x1100
-                                                            CGRect rect = CGRectMake(0, 0, 0, 44);
-                                                            NSIndexPath *indexPath = [weakSelf.tableView indexPathForSelectedRow];
-                                                            UITableViewCell *cell = [weakSelf.tableView cellForRowAtIndexPath:indexPath];
-                                                            [popViewController presentPopoverFromRect:rect inView:cell permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];}},
-                                                        @{@"title":@"UIPopoverController", @"subTitle":@"", @"option":^{
-                                                            InfoViewController *infoViewController = [[InfoViewController alloc] init];
-                                                            UIPopoverController *popViewController = [[UIPopoverController alloc] initWithContentViewController:infoViewController];
-                                                            //popViewController.popoverContentSize = CGSizeMake(200, 100); //弹出窗口大小，如果屏幕画不下，会挤小的。这个值默认是320x1100
-                                                            CGRect rect = CGRectMake(44, 44, 0, 0);
-                                                            NSIndexPath *indexPath = [weakSelf.tableView indexPathForSelectedRow];
-                                                            UITableViewCell *cell = [weakSelf.tableView cellForRowAtIndexPath:indexPath];
-                                                            [popViewController presentPopoverFromRect:rect inView:cell permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];}},
-                                                        @{@"title":@"UIPopoverController", @"subTitle":@"", @"option":^{
-                                                            InfoViewController *infoViewController = [[InfoViewController alloc] init];
-                                                            UIPopoverController *popViewController = [[UIPopoverController alloc] initWithContentViewController:infoViewController];
-                                                            //popViewController.popoverContentSize = CGSizeMake(200, 100); //弹出窗口大小，如果屏幕画不下，会挤小的。这个值默认是320x1100
-                                                            CGRect rect = CGRectMake(0, 0, 44, 44);
-                                                            NSIndexPath *indexPath = [weakSelf.tableView indexPathForSelectedRow];
-                                                            UITableViewCell *cell = [weakSelf.tableView cellForRowAtIndexPath:indexPath];
-                                                            [popViewController presentPopoverFromRect:rect inView:cell permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];}},
-                                                        @{@"title":@"UIPopoverController", @"subTitle":@"UIPopoverController", @"option":^{
-                                                            InfoViewController *infoViewController = [[InfoViewController alloc] init];
-                                                            UIPopoverController *popViewController = [[UIPopoverController alloc] initWithContentViewController:infoViewController];
-                                                            //popViewController.popoverContentSize = CGSizeMake(200, 100); //弹出窗口大小，如果屏幕画不下，会挤小的。这个值默认是320x1100
-                                                            NSIndexPath *indexPath = [weakSelf.tableView indexPathForSelectedRow];
-                                                            UITableViewCell *cell = [weakSelf.tableView cellForRowAtIndexPath:indexPath];
-                                                            NSLog(@"%@", NSStringFromCGRect(cell.bounds));
-                                                            [popViewController presentPopoverFromRect:cell.bounds inView:cell permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];}},
-                                                        ]}
+                            @{@"title":@"UIPopoverController", @"subTitle":@"从UIView弹出", @"option":^{
+                                //新建一个内容控制器
+                                InfoViewController *infoViewController = [InfoViewController infoViewController];
+                                UIPopoverController *popViewController = [[UIPopoverController alloc] initWithContentViewController:infoViewController];
+                                weakSelf.popoverController = popViewController;
+                                
+                                //设置弹出窗口大小，如果屏幕画不下，会挤小的。这个值默认是320x1100
+                                popViewController.popoverContentSize = CGSizeMake(200, 100);
+                                //设置弹出窗口的参考位置
+                                CGRect rect = CGRectMake(0, 0, 0, 0);
+                                NSIndexPath *indexPath = [weakSelf.tableView indexPathForSelectedRow];
+                                UITableViewCell *cell = [weakSelf.tableView cellForRowAtIndexPath:indexPath];
+                                /*
+                                 UIPopoverArrowDirection:箭头方向
+                                 */
+                                [popViewController presentPopoverFromRect:rect inView:cell permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];}},
+                            @{@"title":@"UIPopoverController", @"subTitle":@"从UIBarButtonItem弹出", @"option":^{
+                                //新建一个内容控制器
+                                InfoViewController *infoViewController = [InfoViewController infoViewController];
+                                UIPopoverController *popViewController = [[UIPopoverController alloc] initWithContentViewController:infoViewController];
+                                weakSelf.popoverController = popViewController;
+                                
+                                //用于任何容器布局子控制器，弹出窗口的原始大小来自视图控制器的此属性，如果设置了此属性那么UIPopoverController的popoverContentSize属性会失效。
+                                infoViewController.preferredContentSize = CGSizeMake(200, 200);
+                                
+                                //设置弹出窗口大小，如果屏幕画不下，会挤小的。这个值默认是320x1100
+                                popViewController.popoverContentSize = CGSizeMake(200, 100);
+                                /*
+                                 UIPopoverArrowDirection:箭头方向
+                                 */
+                                [popViewController presentPopoverFromBarButtonItem:self.navigationItem.rightBarButtonItem permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];}},
+                            @{@"title":@"UIPopoverController", @"subTitle":@"预留可编辑控件", @"option":^{
+                                //判断是否弹出控制器
+                                if (weakSelf.popoverController.isPopoverVisible) {
+                                    [weakSelf.popoverController dismissPopoverAnimated:YES];
+                                }
+                                else
+                                {
+                                    InfoViewController *infoViewController = [InfoViewController infoViewController];
+                                    UIPopoverController *popViewController = [[UIPopoverController alloc] initWithContentViewController:infoViewController];
+                                    weakSelf.popoverController = popViewController;
+                                    //设置弹出窗口大小，如果屏幕画不下，会挤小的。这个值默认是320x1100
+                                    //popViewController.popoverContentSize = CGSizeMake(200, 100);
+                                    //设置弹出窗口的参考位置
+                                    CGRect rect = CGRectMake(0, 0, 0, 0);
+                                    NSIndexPath *indexPath = [weakSelf.tableView indexPathForSelectedRow];
+                                    UITableViewCell *cell = [weakSelf.tableView cellForRowAtIndexPath:indexPath];
+                                    //设置可交互的预留控件
+                                    popViewController.passthroughViews = @[cell];
+                                    /*
+                                     UIPopoverArrowDirection:箭头方向
+                                     */
+                                    [popViewController presentPopoverFromRect:rect inView:cell permittedArrowDirections:UIPopoverArrowDirectionLeft animated:YES];
+                                }}}
+                            ]},
+                         @{@"title":@"UIPopoverPresentationController:iOS8中提供，能用于iPad、iPhone中"}, @{@"items":@[
+                              @{@"title":@"UIPopoverPresentationController", @"subTitle":@"从UIView弹出", @"option":^{
+                                  //新建一个内容控制器
+                                  InfoViewController *infoViewController = [InfoViewController infoViewController];
+                                  
+                                  //用于任何容器布局子控制器，弹出窗口的原始大小来自视图控制器的此属性，如果设置了此属性那么UIPopoverController的popoverContentSize属性会失效。
+                                  infoViewController.preferredContentSize = CGSizeMake(200, 200);
+                                  [infoViewController setModalPresentationStyle:UIModalPresentationPopover];
+                                  UIPopoverPresentationController *presentationCtr = infoViewController.popoverPresentationController;
+                                  NSIndexPath *indexPath = [weakSelf.tableView indexPathForSelectedRow];
+                                  UITableViewCell *cell = [weakSelf.tableView cellForRowAtIndexPath:indexPath];
+                                  presentationCtr.sourceView = cell;
+                                  presentationCtr.sourceRect = CGRectMake(10, 10, 20, 20);
+                                  [self presentViewController:infoViewController animated:YES completion:nil];
+                              }}
+                              ]}
                          ];
         
         SectionModel *sectionModel;
@@ -98,10 +112,6 @@
 }
 - (void)rightBarButtonAction:(UIBarButtonItem *)sender
 {
-    InfoViewController *infoViewController = [[InfoViewController alloc] init];
-    UIPopoverController *popViewController = [[UIPopoverController alloc] initWithContentViewController:infoViewController];
-    popViewController.popoverContentSize = CGSizeMake(200, 100); //弹出窗口大小，如果屏幕画不下，会挤小的。这个值默认是320x1100
-    [popViewController presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
 }
 
 #pragma mark - 控制器周期

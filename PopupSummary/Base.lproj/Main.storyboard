@@ -42,6 +42,43 @@
             </objects>
             <point key="canvasLocation" x="1335" y="462"/>
         </scene>
+        <!--Info View Controller-->
+        <scene sceneID="YlL-XE-Hzu">
+            <objects>
+                <viewController storyboardIdentifier="InfoViewController" id="JXS-yq-VJm" customClass="InfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f8O-Aa-PWd"/>
+                        <viewControllerLayoutGuide type="bottom" id="WCu-Tg-CqL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rti-qR-1p5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JB2-Ag-c5s">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="JXS-yq-VJm" id="YYy-MN-Yq4"/>
+                                    <outlet property="delegate" destination="JXS-yq-VJm" id="w7r-MQ-Cge"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WCu-Tg-CqL" firstAttribute="top" secondItem="JB2-Ag-c5s" secondAttribute="bottom" id="2SW-Az-xj3"/>
+                            <constraint firstItem="JB2-Ag-c5s" firstAttribute="leading" secondItem="rti-qR-1p5" secondAttribute="leading" id="6Jz-ix-WPI"/>
+                            <constraint firstAttribute="trailing" secondItem="JB2-Ag-c5s" secondAttribute="trailing" id="DCZ-ty-ggZ"/>
+                            <constraint firstItem="JB2-Ag-c5s" firstAttribute="top" secondItem="rti-qR-1p5" secondAttribute="top" id="UCB-4l-dVt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="JB2-Ag-c5s" id="HjA-e6-Hw9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4k7-B9-gth" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1997" y="462"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="rUG-ya-ze0">
             <objects>
