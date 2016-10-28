@@ -432,7 +432,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PopupSummary/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.etongxing.www.PopupSummary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -445,7 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PopupSummary/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.etongxing.www.PopupSummary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -518,6 +518,7 @@
 				6EE7190C1DB88CD500E77B40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6EE7190D1DB88CD500E77B40 /* Build configuration list for PBXNativeTarget "PopupSummaryTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +527,7 @@
 				6EE7190F1DB88CD500E77B40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6EE719101DB88CD500E77B40 /* Build configuration list for PBXNativeTarget "PopupSummaryUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +536,7 @@
 				6EE719121DB88CD500E77B40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
